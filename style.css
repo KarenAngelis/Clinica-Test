@@ -1,0 +1,416 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------- */
+
+/* TODO O MEU CONTEÚDO */
+.wrapper {
+    display: flex;
+    min-height: 100vh; /* Define a largura total e a altura mínima da janela de visualização para o wrapper */
+}
+
+/*--------------------------------------------------------------------------------------------------- */
+
+/* Menu Lateral */
+.menu {
+    width: 18%;
+    background-color: rgb(23, 22, 22);
+    padding: 10px 20px 0px;
+}
+
+.menu ul {
+    list-style-type: none; /* Remove os bullets da lista do menu */
+    padding: 20px;
+}
+
+.menu ul li {
+    border-bottom: 0.5px solid #3a3535; /* Adiciona uma linha divisória de cor cinza claro */
+    padding-bottom: 20px; /* Adiciona um pequeno espaçamento entre a linha e o próximo item do menu */
+    padding-top: 20px;
+}
+
+.menu ul li:hover {
+    background-color: #363333; /* Altera a cor de fundo quando o mouse passa sobre o item do menu */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+.menu ul li a {
+    text-decoration: none; /* Remove a decoração de texto dos links do menu */
+    color: #f1f1f1; /* Define a cor do texto dos links */
+    font-family: 'Caveat'; /* Define a família da fonte do ícone */
+    font-size: 25px;
+    padding: 24px;
+}
+
+/*--------------------------------------------------------------------------------------------------- */
+
+/* é TODO O CONTEÚDO DEPOIS DO MENU */
+.main {
+    display: flex;
+    flex-flow: column;
+    width: 85%; /* Define a largura do conteúdo principal */
+}
+
+/*--------------------------------------------------------------------------------------------------- */
+
+/* Cabeçalho */
+
+.header {
+    display: flex;
+    flex-direction: row; /* Organiza os itens em uma linha */
+    padding: 10px;
+    align-items: center; /* Centraliza os itens verticalmente */
+    background: linear-gradient(270deg, #8ad7c3, #42c6a4, #bfd0cb, #42947c, #c19bb7); /* Define o fundo do cabeçalho como um gradiente linear */
+    background-size: 1000% 1000%; /* Define o tamanho do background */
+    -webkit-animation: AnimationName 30s ease infinite; /* Adiciona animação ao fundo */
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+/* Animação do Cabeçalho */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Texto do Cabeçalho */
+.header p {
+    margin-top: 10px; /* Adiciona espaçamento acima do parágrafo */
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Caveat'; /* Define a família da fonte do ícone */
+    font-size:25px;
+}
+
+/* Imagem do Cabeçalho */
+.header svg {
+    margin: 100px; /* Adiciona espaçamento à direita da imagem */
+    width: 100px;
+    padding: 20px; /* Adiciona espaçamento interno à imagem */
+    font-size: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------- */
+
+/* Conteúdo */
+.content {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha quando não couberem mais na mesma linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    padding: 60px; /* Adiciona espaçamento interno */
+}
+
+/* Imagens no Conteúdo */
+.content img {
+    width: 350px; /* Define a largura de cada imagem */
+    margin: 30px; /* Adiciona espaço ao redor de cada imagem */
+    object-fit: cover; /* Garante que todas as imagens mantenham a mesma proporção e se ajustem ao espaço disponível */
+    border-radius: 5px; /* Adiciona bordas arredondadas */    
+}
+
+/* Animação de Sombra nas Imagens do Conteúdo */
+.content img  {
+	-webkit-animation: scale-up-center 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* Animação de Sombra nas Imagens do Conteúdo */
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+/*--------------------------------------------------------------------------------------------------------- */
+  /* PÁGINA SOBRE */ 
+  /*O conteúdo da página Sobre */
+  .content-sobre {
+    padding: 70px 80px;
+  }
+
+  .content-sobre h2 {
+    font-family: 'Caveat'; /* Define a família da fonte do ícone */
+    padding: 30px;
+    font-size: 40px;
+  }
+
+  .content-sobre p {
+    padding: 30px;
+    color: #42947c;
+    font-style: italic; /* Deixa o texto em itálico */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte em 20% */
+   }
+
+  .content-sobre ul{
+    list-style-type: none; /* Remove os bullets da lista do menu */
+    padding: 10px;
+  }
+
+  .content-sobre ul li{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 2px;
+    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+    letter-spacing: 0.1rem; /* Ajusta o espaçamento entre os caracteres */
+  }
+
+  /*------------------------------------------------------------------------------------------------- */
+  /*PAGINA HORARIO*/
+    /*O conteúdo da página Horário */
+    .title{
+        padding: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Adicionado para centralizar horizontalmente */
+        color: #42947c;
+    }
+
+    .content-horario{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; /* Isso centraliza verticalmente a tabela */
+    }
+
+    .content-horario table {
+        width: 70%;
+        border-collapse: collapse;
+        line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+        letter-spacing: 0.1rem; /* Ajusta o espaçamento entre os caracteres */
+        font-size: 20px;
+    }
+
+
+     /* Estilos específicos para as células do tbody */
+    .content-horario table tbody td {
+        color: #222020;
+        align-items: center;
+    }
+
+    .content-horario table thead th {
+        font-size: 20px;
+        background-color: #42947c;
+        color: white;
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: center;
+        line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+        letter-spacing: 0.1rem; /* Ajusta o espaçamento entre os caracteres */
+   }
+
+  .content-horario table tr{
+    padding: 50px;
+    border: 1px solid #bcc0bd;
+  }
+  
+  tr:hover {
+    background-color: rgb(235, 250, 230); /* Altere para a cor desejada */
+ }
+
+  .content-horario table tbody td{
+    padding: 10px;
+    border: 1px solid #d6d4dc;
+    align-items: center;
+  }
+
+
+
+  @media (max-width: 600px) {
+    table {
+        font-size: 12px; /* Reduz o tamanho da fonte em dispositivos menores */
+    }
+}
+
+/*------------------------------------------------------------------------------------------------ */
+/*PAGINA CONTATO*/
+
+fieldset{
+
+    color: darkcyan;
+    margin: 0 10px 10px 20px;
+    border: 1px solid #bcc0bd;
+    border-radius: 5px;
+
+}
+
+.title-h1 {
+    padding: 50px;
+    display: flex;
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    color: #42947c;
+}
+
+.content-contact iframe{
+    padding: 20px;
+    
+}
+
+.content-contact {
+    display: flex;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilos para o formulário de contato */
+.content-contact form {
+    margin-top: 10px; /* Adiciona um espaçamento superior ao formulário */
+}
+
+
+.content-contact form 
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 70%; /* Ocupa toda a largura do contêiner pai */
+    padding: 8px; /* Adiciona um preenchimento interno */
+    margin-top: 30px;
+    border: 1px solid #bcc0bd;
+    border-radius: 5px;
+
+}
+
+.content-contact form  textarea{
+    height: 160px;
+    margin-bottom: 30px;
+}
+
+.content-contact form button {
+    padding: 10px 20px; /* Adiciona preenchimento interno ao botão */
+    background-color: #42947c; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    margin-right: 10px; /* Adiciona um espaçamento à direita entre os botões */
+    border-radius: 5px;
+}
+
+
+.content-contact form button:hover {
+    background-color: #3b6357; /* Altera a cor de fundo do botão ao passar o mouse */
+}
+
+.dados {
+    margin-top: 20px; /* Adiciona um espaçamento superior aos parágrafos */
+    line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+    font-family: 'Caveat';
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    flex-direction: column;
+    background-color: #b6c7c2;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* Estilo do Rodapé */
+.footer {
+    background-color: rgb(23, 22, 22);
+    display: flex;
+    justify-content: center; /* Alinha os elementos ao centro horizontalmente */
+    align-items: center;
+}
+
+.footer svg {
+    margin: 0 20px; /* Adiciona espaçamento horizontal entre os elementos */
+}
+
+/*------------------------------------------------------------------------------------------------ */
+
+/*RESPONSIVIDADE*/
+/* Media Queries para Responsividade */
+@media only screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .content img {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .content-sobre {
+        padding: 50px;
+    }
+
+    .content-sobre h2 {
+        font-size: 30px;
+    }
+
+    .content-sobre p {
+        font-size: 1em;
+    }
+
+    .content-sobre ul li {
+        font-size: 18px;
+    }
+
+    .title {
+        padding: 30px;
+    }
+
+    .content-horario table {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .title-h1 {
+        padding: 30px;
+    }
+
+    .content-contact {
+        padding: 30px;
+        flex-direction: column; /* Altera o layout para empilhar os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .content-contact form {
+        width: 100%; /* Define a largura do formulário como 100% da largura disponível */
+    }
+
+    .content-contact form input[type="text"],
+    .content-contact form input[type="email"],
+    .content-contact form textarea {
+        width: 90%; /* Define a largura dos campos de entrada */
+    }
+
+    .content-contact form button {
+        margin-top: 20px; /* Adiciona espaço entre o formulário e o botão */
+    }
+}
+
+   
